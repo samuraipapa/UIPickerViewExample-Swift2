@@ -13,10 +13,13 @@ import AVFoundation
 
 class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate{
     
+    @IBOutlet weak var myTextView: UITextView!
     
     @IBAction func speekButtonPressed(sender: UIButton) {
         
-        speakThisString("anything")
+        let myString = myTextView.text
+        
+        speakThisString(myString)
     }
     
     
